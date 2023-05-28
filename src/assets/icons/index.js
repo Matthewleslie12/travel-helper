@@ -1,0 +1,11 @@
+export { default as message } from "./message-icon.png";
+export { default as saved } from "./heart.png";
+export { default as home } from "./home.png";
+export { default as map } from "./map.png";
+export { default as lake } from "./lake.png";
+export { default as wave } from "./wave.svg";
+export { default as waveWhite } from "./wave-white.svg";
+export { default as location } from "./location.png";
+export { default as seoul } from "./seoul.jpg";
+export { default as activeHeart } from "./heartActive.svg";
+export { default as grayHeart } from "./grayHeart.svg";
