@@ -29,7 +29,9 @@ const Categories = () => {
       <div className=" px-6">
         <div className="pt-8 flex justify-between items-center">
           <h1 className="font-bold text-headerText">Categories</h1>
-          <p className="text-grayText text-sm cursor-pointer">See All</p>
+          <p className="text-grayText text-sm cursor-pointer hover:underline underline-offset-2 decoration-mainBlue">
+            See All
+          </p>
         </div>
         {/* // * 1/3 color button*/}
         {/* 

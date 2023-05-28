@@ -24,7 +24,7 @@ const AppRoutes = () => {
         <Route path="/messages" element={<Messages />} />
       </Routes>
 
-      {/* {!isAuthPage && <Navbar />} */}
+      {!isAuthPage && <Navbar />}
     </>
   );
 };
