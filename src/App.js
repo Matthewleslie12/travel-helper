@@ -1,12 +1,15 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 import AppRoutes from "./Routes/routes";
+import {PreferencesProvider} from "./context/PreferencesContext";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <AppRoutes />
-    </BrowserRouter>
+    <PreferencesProvider>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </PreferencesProvider>
   );
 };
 

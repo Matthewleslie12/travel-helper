@@ -4,8 +4,9 @@ import Masonry from "./Masonry";
 const Explore = () => {
   const [showAllCards, setShowAllCards] = useState(false);
 
-  const handleToggleCards = () => {
+  const handleToggleCards = (e) => {
     setShowAllCards(!showAllCards);
+    e.preventDefault();
   };
 
   return (

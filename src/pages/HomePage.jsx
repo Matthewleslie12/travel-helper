@@ -1,7 +1,6 @@
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../utils/firebase";
 import { RxAvatar } from "react-icons/rx";
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "../components/Search/SearchBar";
@@ -19,29 +18,29 @@ const HomePage = () => {
 
   if (loading) return <h1>Loading...</h1>;
   if (!user) navigate("/sign-up");
-  if (user)
-    return (
-      <>
-        <div className="px-8 pt-12 flex items-center">
-          <SearchBar />
 
-          {user && user.photoURL ? (
-            <img
-              src={user.photoURL}
-              alt=""
-              className="rounded-full w-14 cursor-pointer ml-auto"
-              onClick={navigateAccount}
-            />
-          ) : (
-            <RxAvatar size={50} />
-          )}
-        </div>
+  return (
+    <>
+      <div className="px-6 pt-12 flex justify-between gap-3 ">
+        <SearchBar />
 
-        <FilterList />
-        <ForYou />
-        <Popular />
-      </>
-    );
+        {user && user.photoURL ? (
+          <img
+            src={user.photoURL}
+            alt=""
+            className="rounded-full w-14 cursor-pointer"
+            onClick={navigateAccount}
+          />
+        ) : (
+          <RxAvatar size={50} />
+        )}
+      </div>
+
+      <FilterList />
+      <ForYou />
+      <Popular />
+    </>
+  );
 };
 
 export default HomePage;
