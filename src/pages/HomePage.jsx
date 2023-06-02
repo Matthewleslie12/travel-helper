@@ -1,8 +1,8 @@
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../utils/firebase";
-import { RxAvatar } from "react-icons/rx";
+import {useAuthState} from "react-firebase-hooks/auth";
+import {auth} from "../utils/firebase";
+import {RxAvatar} from "react-icons/rx";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import SearchBar from "../components/Search/SearchBar";
 import ForYou from "../components/HomePage/YourTrips/YourTrips";
 import Popular from "../components/HomePage/Explore/Explore";
@@ -32,7 +32,11 @@ const HomePage = () => {
             onClick={navigateAccount}
           />
         ) : (
-          <RxAvatar size={50} />
+          <RxAvatar
+            size={50}
+            onClick={navigateAccount}
+            className="cursor-pointer"
+          />
         )}
       </div>
 

@@ -8,8 +8,11 @@ const Account = () => {
   const [user] = useAuthState(auth);
 
   const truncateName = (name) => {
-    const firstName = name.split(" ")[0];
-    return firstName;
+    if (name) {
+      const firstName = name.split(" ")[0];
+      return firstName;
+    }
+    return "there";
   };
 
   if (!user) navigate("/sign-up");
@@ -17,7 +20,7 @@ const Account = () => {
     return (
       <div className="p-6 flex flex-col">
         <div className="flex justify-between items-center text-lg font-bold ">
-          <h1>Hey {truncateName(user.displayName)}!</h1>
+          <h1>Hey, {truncateName(user.displayName)}!</h1>
           <img src={user.photoURL} alt="" className="rounded-full w-1/5" />
         </div>
 
