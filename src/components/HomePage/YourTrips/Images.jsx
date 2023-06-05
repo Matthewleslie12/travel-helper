@@ -15,6 +15,7 @@ const Images = ({name, image, rating, location}) => {
   const saveTripToDatabase = async () => {
     try {
       const response = await axios.post("http://localhost:8080/trips", {
+        // TODO - change link once deployed
         userId: 2,
         tripData: {
           title: name,

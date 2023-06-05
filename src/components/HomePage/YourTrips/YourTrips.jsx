@@ -56,7 +56,10 @@ const YourTrips = () => {
           />
         ))
       ) : (
-        <p>No trips found.</p>
+        <p>
+          It looks like you haven't made any trips yet! Click here to plan your
+          first.
+        </p>
       )}
     </div>
   );

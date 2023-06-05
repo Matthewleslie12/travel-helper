@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 
-const Masonry = ({ showAllCards }) => {
+const Masonry = ({showAllCards}) => {
   const [fetchedImages, setFetchedImages] = useState([]);
   const [randomImages, setRandomImages] = useState([]);
 
@@ -31,7 +31,7 @@ const Masonry = ({ showAllCards }) => {
   }, [fetchedImages]);
 
   return (
-    <div className="columns-2 gap-4 pt-4 pb-16">
+    <div className="columns-2 gap-3 pt-4 pb-16">
       {randomImages.map((image) => (
         <div
           className="relative mb-6 aspect-video w-full rounded-xl cursor-pointer"
